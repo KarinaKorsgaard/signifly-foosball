@@ -5,11 +5,11 @@
         <h2>Current game</h2>
         <Confetti ref="confetti" />
         <section class="currentGameContainer">
-          <div class="currentGame" @click="updateScore(0)">
+          <div class="currentGame" @click="updateScore(1)">
             <h3>{{teamNameB}}</h3>
             <h2>{{game.score[1]}}</h2>
           </div>&nbsp; &nbsp;
-          <div class="currentGame" @click="updateScore(1)">
+          <div class="currentGame" @click="updateScore(0)">
             <h3>{{teamNameA}}</h3>
             <h2>{{game.score[0]}}</h2>
           </div>
