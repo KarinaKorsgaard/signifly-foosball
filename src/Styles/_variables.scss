@@ -1,0 +1,28 @@
+$green: #93e2b7;
+$blue: #1434e0;
+$grey: #f2f2f2;
+$Oswald: "Oswald", sans-serif;
+
+$breakpoints: (
+  mobile: 768px,
+  laptop: 1240px,
+  desktop-lg: 1800px
+);
+
+@mixin small {
+  @media (max-width: map-get($breakpoints, mobile) - 1) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}

@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Signifly Scoreboard</h1>
+    <main>
+      <TournamentNav />
+      <CurrentMatch />
+      <br />
+      <br />
+      <h2>Tournament games</h2>
+      <ScoreBoard />
+    </main>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import ScoreBoard from "@/components/ScoreBoard.vue";
+import CurrentMatch from "@/components/CurrentMatch.vue";
+import TournamentNav from "@/components/TournamentNav.vue";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    ScoreBoard,
+    CurrentMatch,
+    TournamentNav
   }
 };
 </script>
