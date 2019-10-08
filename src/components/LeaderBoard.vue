@@ -41,14 +41,14 @@ export default {
 	},
 	
     getTeamPoints(teamId) {
-      const homeGames = [...this.games].filter(game => game.id[0] == teamId);
-      const outGames = [...this.games].filter(game => game.id[1] == teamId);
+      const homeGames = [...this.games].filter(game => game.id[0] == teamId && game.isDone);
+      const outGames = [...this.games].filter(game => game.id[1] == teamId  && game.isDone);
 
       const wonHome = homeGames.filter(game => game.score[0] > game.score[1]);
       const wonOut = outGames.filter(game => game.score[0] < game.score[1]);
       const won = wonHome.length + wonOut.length;
       const ties = [...this.games].filter(
-        game => game.score[0] == game.score[1]
+        game => game.score[0] == game.score[1] && game.isDone
       ).length;
       const lost = this.games.length - ties - won;
 
